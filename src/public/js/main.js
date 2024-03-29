@@ -27,7 +27,7 @@ map.on('locationfound', (e) => {
 socket.on('newUserCoordinates', (coords) => {
   console.log(coords);
   const userIcon = L.icon({
-    iconUrl: '/img/icon2.png',
+    iconUrl: '/img/icon.png',
     iconSize: [38, 42],
   })
   const newUserMarker = L.marker([coords.lat, coords.lng], {
