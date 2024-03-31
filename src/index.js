@@ -6,6 +6,7 @@ const engine = require('ejs-mate');
 
 const app = express();
 const server = http.Server(app);
+const port = process.env.PORT || 3000;
 const io = socketIO(server);
 
 // settings
@@ -25,6 +26,6 @@ require('./sockets')(io);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // starting the server
-server.listen(3000, () => {
-  console.log('Server on port', 3000);
-});
+server.listen(port, () => {
+  console.log(`port runing in http://localhost:${port}`);
+}); 
